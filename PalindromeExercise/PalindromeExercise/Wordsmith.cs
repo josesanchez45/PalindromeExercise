@@ -9,7 +9,12 @@ namespace PalindromeExercise
     {
         public bool IsAPalindrome(string str)
         {
-            return str.SequenceEqual(str.Reverse());
+            if (str =="" || str == null) 
+            {
+                return false;
+            }
+
+            return str.ToLower().SequenceEqual(str.Reverse());
         }
     }
 }
